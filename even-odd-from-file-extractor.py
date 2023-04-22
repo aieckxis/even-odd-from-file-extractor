@@ -9,8 +9,13 @@ with open('numbers.txt', 'r') as f:
 even_numbers = []
 odd_number = []
 # Run over each number in the input list repeatedly.
+for num in numbers:
 # Test if the number is even.
+    if number % 2 == 0:
 # Add the number to the list of even numbers if it is even.
+        even_numbers.append(num)
 # Add the number to the list of odd numbers if it is odd.
+    else:
+        odd_number.append(num)
 # Write even integers into the output file "even.txt" after opening it.
 # Write odd numbers to the output file 'odd.txt' after opening it.

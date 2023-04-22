@@ -7,15 +7,19 @@ with open('numbers.txt', 'r') as f:
     numbers = [int(line.strip()) for line in f.readlines()]
 # In order to hold even and odd numbers, make two empty lists.
 even_numbers = []
-odd_number = []
+odd_numbers = []
 # Run over each number in the input list repeatedly.
 for num in numbers:
 # Test if the number is even.
-    if number % 2 == 0:
+    if num % 2 == 0:
 # Add the number to the list of even numbers if it is even.
         even_numbers.append(num)
 # Add the number to the list of odd numbers if it is odd.
     else:
-        odd_number.append(num)
+        odd_numbers.append(num)
 # Write even integers into the output file "even.txt" after opening it.
+with open('even.txt', 'w') as f:
+    f.write('\n'.join(map(str, even_numbers)))
 # Write odd numbers to the output file 'odd.txt' after opening it.
+with open('odd.txt', 'w') as f:
+    f.write('\n'.join(map(str, odd_numbers)))
